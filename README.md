@@ -1,4 +1,4 @@
-![Ola Rides Analytics Banner](assets/github_banner.png)
+![Ola Rides Analytics Banner](Assets/github_banner.png)
 
 
 ## Ola Rides Analytics: Power BI & Streamlit
