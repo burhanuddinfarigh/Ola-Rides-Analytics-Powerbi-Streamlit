@@ -18,6 +18,8 @@ def load_data():
 
 df = load_data()
 
+df["booking_datetime"] = pd.to_datetime(df["booking_datetime"])
+
 # Header
 
 st.title(" OLA Ride Analytics – Business Insights Dashboard")
@@ -123,4 +125,5 @@ with st.form("feedback_form"):
     if submitted:
 
         st.success("Thank you for your feedback! 🙌")
+
 
