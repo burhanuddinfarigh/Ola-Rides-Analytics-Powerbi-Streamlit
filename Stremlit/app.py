@@ -3,6 +3,8 @@ import pandas as pd
 import sqlite3
 import os
 
+BASE_DIR = os.path.dirname(__file__)
+
 st.set_page_config(
     page_title="OLA Ride Analytics",
     layout="wide"
@@ -82,28 +84,32 @@ st.dataframe(filtered_df.head(50), use_container_width=True)
 st.divider()
 
 # Power BI Dashboards (Images)
+def asset_path(filename):
+    return os.path.join(BASE_DIR, "assets", filename)
 
 st.subheader(" Power BI Dashboard Insights")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("assets/overview.png", caption="Overall Ride Performance", width=400)
-    st.image("assets/vehicle.png", caption="Vehicle Type Analysis", width=400)
+    st.image(asset_path("overview.png"), caption="Overall Ride Performance", width=400)
+    st.image(asset_path("vehicle.png"), caption="Vehicle Type Analysis", width=400)
 
 with col2:
-    st.image("assets/revenue.png", caption="Revenue Insights", width=400)
-    st.image("assets/ratings.png", caption="Ratings & Feedback", width=400)
+    st.image(asset_path("revenue.png"), caption="Revenue Insights", width=400)
+    st.image(asset_path("ratings.png"), caption="Ratings & Feedback", width=400)
 
 st.divider()
 
 # Time Analysis
 
 st.subheader(" Time-Based Analysis")
+
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    st.image("assets/time.png", caption="Hourly / Day-wise Ride Trends", width=600)
+    st.image(asset_path("time.png"), caption="Hourly / Day-wise Ride Trends", width=600)
+
 st.divider()
 
 # Footer
@@ -125,5 +131,6 @@ with st.form("feedback_form"):
     if submitted:
 
         st.success("Thank you for your feedback! 🙌")
+
 
 
