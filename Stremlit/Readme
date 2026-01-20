@@ -1,0 +1,45 @@
+# Ola Rides Analytics – Streamlit App
+
+This Streamlit application serves as the **presentation layer** for the
+Ola Rides Analytics project.
+
+It is designed for quick demos, walkthroughs, and non-technical stakeholders
+to explore key insights without opening Power BI.
+
+
+
+##  Purpose of the App
+
+- Showcase key business metrics and insights
+- Display SQL query outputs in tabular form
+- Provide a lightweight interface for interacting with the analysis
+- Complement Power BI dashboards for presentations and demos
+
+This app intentionally avoids heavy business logic and focuses on clarity,
+speed, and usability.
+
+
+
+##  What the App Includes
+
+- High-level KPIs (rides, revenue, ratings)
+- Filtered views by vehicle type and day of week
+- SQL-based summary tables
+- Embedded Power BI screenshots for reference
+
+
+
+## Tech Stack
+
+- Python
+- Streamlit
+- Pandas
+- SQL (pre-processed outputs)
+
+
+
+##  How to Run the App Locally
+
+1. Navigate to the app directory:
+   ```bash
+   cd streamlit_app
