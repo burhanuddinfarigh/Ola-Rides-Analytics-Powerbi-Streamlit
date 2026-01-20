@@ -92,7 +92,7 @@ st.subheader(" Power BI Dashboard Insights")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image(asset_path("overview.png"), caption="Overall Ride Performance", width=400)
+    st.image(asset_path("Overview.png"), caption="Overall Ride Performance", width=400)
     st.image(asset_path("vehicle.png"), caption="Vehicle Type Analysis", width=400)
 
 with col2:
@@ -131,6 +131,7 @@ with st.form("feedback_form"):
     if submitted:
 
         st.success("Thank you for your feedback! 🙌")
+
 
 
 
