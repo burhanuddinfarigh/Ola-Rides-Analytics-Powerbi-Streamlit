@@ -95,7 +95,7 @@ All analyses were designed with this constraint in mind to maintain analytical i
 
 
 
-##📎 Outputs
+## Outputs
 
 - Interactive Power BI Dashboard
 - Streamlit Web App
