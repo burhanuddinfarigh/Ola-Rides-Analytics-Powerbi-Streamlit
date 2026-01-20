@@ -11,9 +11,9 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("ola_rides_cleaned.csv")
-    df["booking_datetime"] = pd.to_datetime(df["booking_datetime"])
-    return df
+    base_dir = os.path.dirname(__file__)
+    file_path = os.path.join(base_dir, "ola_rides_cleaned.csv")
+    return pd.read_csv(file_path)
 
 df = load_data()
 
@@ -120,4 +120,5 @@ with st.form("feedback_form"):
     submitted = st.form_submit_button("Submit")
 
     if submitted:
+
         st.success("Thank you for your feedback! 🙌")
